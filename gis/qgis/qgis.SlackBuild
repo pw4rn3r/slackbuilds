@@ -76,7 +76,7 @@ else
   WITHGRASS=""
 fi
 
-sed -i 's|${SIP_BINARY_PATH}|/usr/bin/python3-sip|' cmake/SIPMacros.cmake
+sed -i 's|${SIP_BINARY_PATH}|/usr/bin/sip3|' cmake/SIPMacros.cmake
 sed -i '/CMAKE_POLICY (SET CMP0071 NEW)/d' CMakeLists.txt
 
 mkdir -p build
@@ -92,7 +92,7 @@ cd build
     -DWITH_QWTPOLAR=TRUE \
     -DWITH_CUSTOM_WIDGETS=FALSE \
     -DBINDINGS_GLOBAL_INSTALL=TRUE \
-    -DQWT_INCLUDE_DIR=/usr/include/qt5/qwt \
+    -DQWT_INCLUDE_DIR=/usr/include/qwt \
     -DQSCINTILLA_INCLUDE_DIR=/usr/include/qt5 \
     -DENABLE_TESTS=FALSE \
     -DWITH_3D=TRUE \
